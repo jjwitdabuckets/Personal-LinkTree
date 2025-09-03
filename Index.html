@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntshingila's LinkTree</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .link-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .link-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.6rem;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Specific icon colors */
+        .youtube { color: #FF0000; }
+        .twitch { color: #9146FF; }
+        .sneaker { color: #FF9900; }
+        .soundcloud { color: #FF7700; }
+        .email { color: #EA4335; }
+        .github { color: #333; }
+        .instagram { 
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .profile-card {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .bio {
+                font-size: 1rem;
+            }
+            
+            .link-item {
+                font-size: 1rem;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <img src="d:\PersonalLinkTree\Images\PlayboyEssencials004.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Mr. Ntshingila</h1>
+            <p class="bio">IT Specialist • Web Developer • Model</p>
+            
+            <div class="links">
+                <a href="https://www.youtube.com/@Full.StackForward" class="link-item" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-youtube youtube"></i>
+                    </div>
+                    YouTube Channel
+                </a>
+
+                <a href="https://www.instagram.com/nkosiii_/" class="link-item" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-instagram instagram"></i>
+                    </div>
+                    Instagram
+                </a>
+                
+                <a href="https://www.twitch.tv/chxppa_live" class="link-item" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-twitch twitch"></i>
+                    </div>
+                    Twitch Channel
+                </a>
+                
+                <a href="mailto:dev.nkosii@gmail.com" class="link-item">
+    <div class="link-icon">
+        <i class="fas fa-envelope email"></i>
+    </div>
+    Email Me
+</a>
+                
+                <a href="https://github.com/jjwitdabuckets" class="link-item" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-github github"></i>
+                    </div>
+                    GitHub Projects
+                </a>
+                
+                
+                <a href="https://soundcloud.com/chxppaonthatbeat" class="link-item" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-soundcloud soundcloud"></i>
+                    </div>
+                    NO PROBLEM$ OUT NOW
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Ntshingila. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Add subtle animation to profile image on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImg = document.querySelector('.profile-img');
+            profileImg.style.transform = 'scale(0.9)';
+            profileImg.style.opacity = '0';
+            
+            setTimeout(() => {
+                profileImg.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+                profileImg.style.transform = 'scale(1)';
+                profileImg.style.opacity = '1';
+            }, 100);
+            
+            // Add click animation to links
+            const links = document.querySelectorAll('.link-item');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.currentTarget.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        e.currentTarget.style.transform = '';
+                    }, 200);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
